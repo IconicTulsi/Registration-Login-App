@@ -1,0 +1,22 @@
+﻿@model RegistrationLoginApp.Models.Registration
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2>Welcome</h2>
+@using (Html.BeginForm("Signout", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Signout" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
